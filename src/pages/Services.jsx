@@ -7,11 +7,11 @@ const Services = () => {
   return (
     <section
       id="services"
-      className="min-h-screen flex items-center justify-center relative dark:bg-black"
+      className="min-h-screen flex items-center justify-center relative pt-20 dark:bg-black"
     >
         <RevealOnScroll>
       <div className=" z-10 px-4">
-        <h2 className=" text-center text-5xl md:text-7xl font-bold mb-6 bg-gradient-to-r from-blue-500 to-cyan-400 bg-clip-text text-transparent leading-tight">
+        <h2 className=" text-center text-5xl md:text-7xl font-bold mb-16 bg-gradient-to-r from-blue-500 to-cyan-400 bg-clip-text text-transparent leading-tight">
           <span className="block">Services</span>
         </h2>
 

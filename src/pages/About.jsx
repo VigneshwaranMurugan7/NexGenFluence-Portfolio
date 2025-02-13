@@ -19,7 +19,7 @@ const About = () => {
             Our mission is to amplify your voice through engaging social media
             strategies, high-quality visuals, and creative storytelling.
           </span>
-          <div className="mb-16">
+          <span className="block">
             <span className="block ">We specialize in:</span>
             <span className="block">
               ✅ Managing Instagram pages for businesses
@@ -33,9 +33,9 @@ const About = () => {
             <span className="block">
               ✅ Engaging content that drives results
             </span>
-          </div>
+          </span>
 
-          <span className="block text-center">
+          <span className="block mt-16 text-center">
             Ready to make an impact? Let’s collaborate!
           </span>
         </p>
