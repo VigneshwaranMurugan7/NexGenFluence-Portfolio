@@ -5,6 +5,7 @@ import About from "./pages/About"
 import Home from "./pages/Home"
 import Services from "./pages/Services"
 import Contact from "./pages/Contact"
+import Gallery from "./pages/Gallery"
 
 
 const App = () => {
@@ -14,6 +15,7 @@ const App = () => {
       <Home/>
       <About/>
       <Services/>
+      <Gallery/>
       <Contact />
       <Footer/>
     </div>
