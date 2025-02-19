@@ -5,10 +5,10 @@ const About = () => {
   return (
     <section
       id="about"
-      className="min-h-screen flex items-center justify-center relative dark:bg-black"
+      className="min-h-screen flex items-center justify-center relative dark:bg-black pt-20"
     >
         <RevealOnScroll>
-      <div className=" z-10 px-4">
+      <div className=" z-10 px-4 ">
         <h2 className=" text-center text-5xl md:text-7xl font-bold mb-6 bg-gradient-to-r from-blue-500 to-cyan-400 bg-clip-text text-transparent leading-tight">
           <span className="block">About Us</span>
         </h2>
