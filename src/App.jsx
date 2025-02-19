@@ -9,7 +9,7 @@ import Contact from "./pages/Contact"
 
 const App = () => {
   return (
-    <div className="pt-20">
+    <div>
       <Header/>
       <Home/>
       <About/>
