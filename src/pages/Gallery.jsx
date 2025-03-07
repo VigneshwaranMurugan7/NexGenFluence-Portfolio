@@ -143,7 +143,7 @@ const Gallery = () => {
           <span className="block">Instagram feed</span>
         </h4>
         <script src="https://static.elfsight.com/platform/platform.js" async></script>
-      <div className="elfsight-app-7409c951-3bd5-412a-8643-b38072e1ddb0" data-elfsight-app-lazy></div>
+        <div className="elfsight-app-822e20db-efa2-4ba5-b2b1-82be316d1948" data-elfsight-app-lazy></div>
       </div>
       </div>
     </section>
