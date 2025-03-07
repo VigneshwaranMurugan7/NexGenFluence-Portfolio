@@ -32,7 +32,7 @@ const Contact = () => {
       <RevealOnScroll>
         <div className="px-4 w-150">
           <h2 className=" text-center text-5xl md:text-7xl font-bold mb-6 bg-gradient-to-r from-blue-500 to-cyan-400 bg-clip-text text-transparent leading-tight">
-            Get In Touch with us
+            Get In Touch with us...
           </h2>
           <form className="space-y-5" onSubmit={handleSubmit}>
             <div className="relative">
