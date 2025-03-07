@@ -4,17 +4,25 @@ import logo from "../assets/logo.png";
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const menuRef = useRef(null);
+  const buttonRef = useRef(null); // Add ref to the toggle button
 
-  // Close menu when clicking outside
   useEffect(() => {
     const handleClickOutside = (event) => {
-      if (menuRef.current && !menuRef.current.contains(event.target)) {
-        setIsMenuOpen(false);
+      // Check if the click is outside the menu and button
+      if (
+        menuRef.current &&
+        !menuRef.current.contains(event.target) &&
+        buttonRef.current &&
+        !buttonRef.current.contains(event.target)
+      ) {
+        setIsMenuOpen(false); // Close the menu if clicked outside
       }
     };
 
     if (isMenuOpen) {
       document.addEventListener("mousedown", handleClickOutside);
+    } else {
+      document.removeEventListener("mousedown", handleClickOutside);
     }
 
     return () => {
@@ -22,10 +30,19 @@ const Header = () => {
     };
   }, [isMenuOpen]);
 
+  const handleMenuItemClick = () => {
+    if (isMenuOpen) {
+      setIsMenuOpen(false); // Close menu on item click
+    }
+  };
+
   return (
     <nav className="bg-white border-gray-200 dark:bg-gray-900 fixed top-0 w-full z-50 shadow-md">
       <div className="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4">
-        <a href="#home" className="flex items-center space-x-2 rtl:space-x-reverse">
+        <a
+          href="#home"
+          className="flex items-center space-x-2 rtl:space-x-reverse"
+        >
           <img src={logo} className="h-20" alt="Logo" />
           <span className="self-center text-2xl font-semibold whitespace-nowrap dark:text-white">
             NexGenFluence
@@ -34,6 +51,7 @@ const Header = () => {
 
         {/* Toggle Button */}
         <button
+          ref={buttonRef} // Attach the buttonRef to the toggle button
           onClick={() => setIsMenuOpen(!isMenuOpen)}
           type="button"
           className="inline-flex items-center p-2 w-10 h-10 justify-center text-sm text-gray-500 rounded-lg md:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-800 dark:text-gray-500 dark:hover:bg-gray-700 dark:focus:ring-gray-600"
@@ -70,6 +88,7 @@ const Header = () => {
             <li>
               <a
                 href="#home"
+                onClick={handleMenuItemClick}
                 className="block py-2 px-3 text-gray-900 rounded-sm hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent"
               >
                 Home
@@ -78,6 +97,7 @@ const Header = () => {
             <li>
               <a
                 href="#about"
+                onClick={handleMenuItemClick}
                 className="block py-2 px-3 text-gray-900 rounded-sm hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent"
               >
                 About
@@ -86,6 +106,7 @@ const Header = () => {
             <li>
               <a
                 href="#services"
+                onClick={handleMenuItemClick}
                 className="block py-2 px-3 text-gray-900 rounded-sm hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent"
               >
                 Services
@@ -94,6 +115,7 @@ const Header = () => {
             <li>
               <a
                 href="#gallery"
+                onClick={handleMenuItemClick}
                 className="block py-2 px-3 text-gray-900 rounded-sm hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent"
               >
                 Gallery
@@ -102,6 +124,7 @@ const Header = () => {
             <li>
               <a
                 href="#contact"
+                onClick={handleMenuItemClick}
                 className="block py-2 px-3 text-gray-900 rounded-sm hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent"
               >
                 Contact
