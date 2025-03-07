@@ -22,11 +22,6 @@ const Header = () => {
     };
   }, [isMenuOpen]);
 
-  // Close menu when a menu item is clicked
-  const handleMenuItemClick = () => {
-    setIsMenuOpen(false);
-  };
-
   return (
     <nav className="bg-white border-gray-200 dark:bg-gray-900 fixed top-0 w-full z-50 shadow-md">
       <div className="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4">
@@ -75,7 +70,6 @@ const Header = () => {
             <li>
               <a
                 href="#home"
-                onClick={handleMenuItemClick}
                 className="block py-2 px-3 text-gray-900 rounded-sm hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent"
               >
                 Home
@@ -84,7 +78,6 @@ const Header = () => {
             <li>
               <a
                 href="#about"
-                onClick={handleMenuItemClick}
                 className="block py-2 px-3 text-gray-900 rounded-sm hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent"
               >
                 About
@@ -93,7 +86,6 @@ const Header = () => {
             <li>
               <a
                 href="#services"
-                onClick={handleMenuItemClick}
                 className="block py-2 px-3 text-gray-900 rounded-sm hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent"
               >
                 Services
@@ -102,7 +94,6 @@ const Header = () => {
             <li>
               <a
                 href="#gallery"
-                onClick={handleMenuItemClick}
                 className="block py-2 px-3 text-gray-900 rounded-sm hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent"
               >
                 Gallery
@@ -111,7 +102,6 @@ const Header = () => {
             <li>
               <a
                 href="#contact"
-                onClick={handleMenuItemClick}
                 className="block py-2 px-3 text-gray-900 rounded-sm hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent"
               >
                 Contact
